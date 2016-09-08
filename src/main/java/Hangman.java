@@ -7,7 +7,7 @@ import java.util.Random;
 public class Hangman {
   String[] wordsArray = {"cat", "doggy", "mousecall", "horsefly"};
   Random runRandom = new Random();
-
+  String userInput;
   public String choseRandomWord(){
     String wordRandom = wordsArray[runRandom.nextInt(4)];
     return wordRandom;
@@ -27,4 +27,16 @@ public class Hangman {
     String[] lettersArray = wordHolder.split("");
     return lettersArray;
   }
+
+  public String[] createLetterComparison(String letter) {
+    // String[] arrayHolder = {"c","a","t"};
+    String[] blankHolder = {"-","-","-"};
+     for(int i = 0; i<3; i++){
+       if (letter.equals("a")){
+            blankHolder[i].replaceAll("a");
+        }
+        
+      }return blankHolder;
+  }
+
 }
